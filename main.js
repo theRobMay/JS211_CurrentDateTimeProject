@@ -47,11 +47,25 @@ if (hour===0 && prepand===' AM ')
 }
 console.log(`Current Time : ${hour}${prepand} : ${minute} : ${second}`);
 // Write a JavaScript program to convert a number to a string.
+const numToString =() => {
+  let num = 15
+  let text = num.toString();
 
+  console.log(text, num)
+  document.getElementById("num-to-string").innerHTML = (`The typeof ${text} is ${typeof text}`)
+}
 
 
 // Write a JavaScript program to convert a string to the number.
 
+const stringToNum =() => {
+  let num = "15";
+  let text = parseInt(num);
+
+  console.log(text, num);
+
+  document.getElementById("string-to-num").innerHTML = (`The typeof ${text} is ${typeof text}`);
+}
 
 
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
