@@ -75,18 +75,75 @@ const stringToNum =() => {
   // * Number
   // * NaN
   // * String
-  
+let datatypeItem =""
 
+const saveDatatypeInput = () => {
+  let datatypeItem = document.getElementById("datatypeItem").value;
+}
+const putDataInElement = (userDatatypeItem) => {
+  document.getElementById("dataResults").innerHTML = (`Data Type: ${typeof datatypeItem}`);
+}
+const dataResult = () => {
+  putDataInElement(datatypeItem)
+}
   
 // Write a JavaScript program that adds 2 numbers together.
+let firstNum = null
+let secondNum = null
+let operation = null
 
+const saveFirstNumber = (num) => {
+  firstNum = parseInt(num)
+}
+const saveSecondNumber = (num) => {
+  secondNum = parseInt(num)
+}
 
+const add = (numA, numB) => {
+  const sum = numA + numB
+  return sum
+}
 
+const putResultInElement = (operationResults) => {
+  document.getElementById("result").innerHTML = "Results: " + operationResults
+
+}
+const changeOperation = (chosenOperation) => {
+  operation = chosenOperation
+  console.log(operation)
+}
+const equals = () => {
+  switch (operation) {
+  case "addition":
+    putResultInElement(add(firstNum, secondNum))
+    break;
+  default:
+    "Choose an operation"
+  }
+}
 // Write a JavaScript program that runs only when 2 things are true.
+let testNum = null;
+
+const saveTestNumber = (num) => {
+  testNum = parseInt(num)
+}
+
+const conditionalCheck = () => {
+  console.log("testnum:", testNum)
+  if (testNum < 5) {
+    document.getElementById("conditionResult").innerHTML = "This number is less than 5"
+  }
+  if (testNum >= 5 && testNum <= 100) {
+    document.getElementById("conditionResult").innerHTML = "This number is greater than 4 but less than 100"
+  }
+  if (testNum < 0 || testNum >100) {
+    document.getElementById("conditionResult").innerHTML = "This number is greater than 100 or is a negative integer"
+  }
+}
 
 
 
-// Write a JavaScript program that runs when 1 of 2 things are true.
+
 
 
 

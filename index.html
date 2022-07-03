@@ -6,7 +6,7 @@
     <script src="main.js"></script>
   </head>
   <body>
-    <h1>Hello World!</h1>
+    <h1>JavaScript Homework Page</h1>
     <hr/>
     <div id="display-element"></div>
     <button onclick="displayDate()">Date</button>
@@ -16,5 +16,22 @@
     <hr/>
     <div id="string-to-num"></div>
     <button onclick="stringToNum()">String to Number</button>
+    <hr/>
+    <label for="first-number">First Number:</label>
+    <input type="number" id="first-Number" name="first-Number" placeholder="type the first number" value="" onkeyup="saveFirstNumber(this.value)">
+    <label for="second-number">Second Number:</label>
+    <input type="number" id="second-Number" name="second-Number" placeholder="type the second number" onkeyup="saveSecondNumber(this.value)">
+    <button type="button" name="add" id="addition" onclick="changeOperation(this.id)">Add</button>
+    <button type="button" onclick="equals()">Equals</button>
+    <div id="result"></div>
+    <hr/>
+    <input id="datatypeItem" name="datatypeItem" placeholder="Data Type Analyzer" value="" onkeyup="saveDatatypeInput(this.value)">
+    <button type="button" name="Data Type?" id="datatypeAnalyze" onclick="dataResult()">Data Type?</button>
+    <div id="dataResults"></div>
+    <hr/>
+    <label for="test-number">Try entering 1, 10, and 110:</label>
+    <input type="number" id="test-Number" name="test-Number" placeholder="type a number" value="" onkeyup="saveTestNumber(this.value)">
+    <button type="button" onclick="conditionalCheck()">Conditionals Check</button>
+    <div id="conditionResult"></div>
   </body>
 </html>
